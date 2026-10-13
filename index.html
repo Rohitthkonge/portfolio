@@ -171,6 +171,22 @@ nav{position:fixed;top:1.2rem;left:50%;transform:translateX(-50%);display:flex;a
 .proj-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.68rem;color:var(--cyan);text-decoration:none;transition:gap 0.2s;}
 .proj-link:hover{gap:0.8rem;}
 
+/* ACHIEVEMENTS */
+.ach-sub{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--cyan);margin:0 0 1.2rem;}
+.ach-sub.second{margin-top:3rem;}
+.ach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;}
+.ach-card{padding:1.8rem 2rem;}
+.ach-top{display:flex;align-items:center;justify-content:space-between;gap:0.8rem;margin-bottom:0.8rem;flex-wrap:wrap;}
+.ach-icon{font-size:1.8rem;}
+.ach-badges{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.ach-badge{font-family:var(--mono);font-size:0.58rem;padding:0.22rem 0.65rem;border-radius:999px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.22);color:#93c5fd;}
+.ach-badge.on{background:rgba(34,211,238,0.08);border-color:rgba(34,211,238,0.25);color:#67e8f9;}
+.ach-badge.off{background:rgba(168,85,247,0.1);border-color:rgba(168,85,247,0.25);color:#d8b4fe;}
+.ach-badge.win{background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.22);color:#86efac;}
+.ach-title{font-size:1rem;font-weight:800;margin-bottom:0.3rem;}
+.ach-org{font-family:var(--mono);font-size:0.68rem;color:var(--muted);margin-bottom:0.7rem;}
+.ach-desc{font-size:0.8rem;color:var(--muted);line-height:1.7;}
+
 /* TIMELINE */
 .timeline{position:relative;padding-left:2.5rem;}
 .timeline::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--blue),var(--violet),var(--cyan));}
@@ -225,6 +241,7 @@ footer{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,0.07);p
   .contact-grid{grid-template-columns:1fr;}
   .proj-gallery{grid-template-columns:1fr;}
   .proj-card.feat{grid-column:span 1;}
+  .ach-grid{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
   nav{padding:0.6rem 1.2rem;gap:1rem;width:92%;}
@@ -267,6 +284,7 @@ footer{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,0.07);p
   <a href="#about" onclick="closeMob()">About</a>
   <a href="#skills" onclick="closeMob()">Skills</a>
   <a href="#projects" onclick="closeMob()">Projects</a>
+  <a href="#achievements" onclick="closeMob()">Achievements</a>
   <a href="#timeline" onclick="closeMob()">Journey</a>
   <a href="#contact" onclick="closeMob()">Contact</a>
 </div>
@@ -277,6 +295,7 @@ footer{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,0.07);p
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
     <a href="#timeline">Journey</a>
     <a href="#contact">Contact</a>
   </div>
@@ -293,7 +312,8 @@ footer{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,0.07);p
     <a href="#contact" class="btn btn-glass magnetic">✉️ Get In Touch</a>
   </div>
   <div class="hero-stats">
-    <div class="hstat"><div class="hstat-n" data-count="7">0</div><div class="hstat-l">Projects Shipped</div></div>
+    <div class="hstat"><div class="hstat-n" data-count="8">0</div><div class="hstat-l">Projects Shipped</div></div>
+    <div class="hstat"><div class="hstat-n" data-count="4">0</div><div class="hstat-l">Hackathons</div></div>
     <div class="hstat"><div class="hstat-n" data-count="7.7" data-decimal="1">0</div><div class="hstat-l">CGPA</div></div>
     <div class="hstat"><div class="hstat-n">3rd</div><div class="hstat-l">Year Student</div></div>
     <div class="hstat"><div class="hstat-n">AI/ML</div><div class="hstat-l">Specialization</div></div>
@@ -453,15 +473,88 @@ footer{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,0.07);p
         <a href="https://github.com/Rohitthkonge" target="_blank" class="proj-link">View on GitHub →</a>
       </div>
     </div>
+    <div class="glass proj-card reveal tilt">
+      <div class="proj-visual">📡</div>
+      <div class="proj-body">
+        <div class="proj-num">07 / UI·UX</div>
+        <div class="proj-title">CampusPulse</div>
+        <p class="proj-desc">A UI/UX hackathon project (Devpost): one unified student app that brings timetables, attendance, events, and notices together, replacing scattered college portals.</p>
+        <div class="proj-tags"><span class="ptag v">UI/UX Design</span><span class="ptag">Product Design</span><span class="ptag v">Hackathon</span></div>
+        <a href="https://github.com/Rohitthkonge" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
     <div class="glass proj-card feat reveal tilt">
       <div class="proj-visual">📊</div>
       <div class="proj-body">
-        <div class="proj-num">07 / SERIES</div>
+        <div class="proj-num">08 / SERIES</div>
         <div class="proj-title">EDA Case Study Series</div>
         <p class="proj-desc">A running series of exploratory data-analysis case studies — each one a notebook + README + visualizations digging into a real (non-synthetic) dataset: Gmail inbox trends, Netflix genres & ratings, Spotify audio features, and a FIFA World Cup 2026 dataset.</p>
         <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag v">Data Visualization</span></div>
         <a href="https://github.com/Rohitthkonge/-Email-case-study-eda" target="_blank" class="proj-link">View on GitHub →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="sec" id="achievements">
+  <div class="reveal"><div class="sec-label">Achievements</div>
+  <h2 class="sec-title">Hackathons & <span>Certifications</span></h2>
+  <p class="sec-sub">Building under time pressure, competing with teams across colleges, and learning from industry programs.</p></div>
+
+  <div class="ach-sub reveal">Hackathons</div>
+  <div class="ach-grid">
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">🏆</div><div class="ach-badges"><span class="ach-badge win">Finalist · 6th Place</span><span class="ach-badge on">Online</span></div></div>
+      <div class="ach-title">Hackoverflow 10.0</div>
+      <div class="ach-org">Aarohan · NIT Durgapur</div>
+      <p class="ach-desc">Reached the final round and finished 6th, just outside the top 5.</p>
+    </div>
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">🚀</div><div class="ach-badges"><span class="ach-badge win">Second Round Selected</span><span class="ach-badge off">Offline</span></div></div>
+      <div class="ach-title">AI HACK × MRDU 2K26</div>
+      <div class="ach-org">Malla Reddy University · Trizen Community · 3–4 Oct 2026</div>
+      <p class="ach-desc">Selected for the second round of a 24-hour, in-person hackathon.</p>
+    </div>
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">⚡</div><div class="ach-badges"><span class="ach-badge">Participant</span><span class="ach-badge on">Online</span></div></div>
+      <div class="ach-title">WebRush</div>
+      <div class="ach-org">Frontend Arena · via Unstop</div>
+      <p class="ach-desc">A 6-hour frontend hackathon — shipped a working UI under a tight deadline.</p>
+    </div>
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">💼</div><div class="ach-badges"><span class="ach-badge">Participant</span><span class="ach-badge on">Online</span></div></div>
+      <div class="ach-title">Think Tank: The Deal Room</div>
+      <div class="ach-org">IIM Rohtak · via Unstop</div>
+      <p class="ach-desc">Worked through real business problems in a case-based competition.</p>
+    </div>
+  </div>
+
+  <div class="ach-sub second reveal">Certifications & Internships</div>
+  <div class="ach-grid">
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">☁️</div><div class="ach-badges"><span class="ach-badge">May – Jul 2026</span></div></div>
+      <div class="ach-title">AWS Cloud Computing — DevOps Internship</div>
+      <div class="ach-org">APSSDC · Govt. of Andhra Pradesh</div>
+      <p class="ach-desc">Worked with Lambda, S3, DynamoDB, API Gateway, and Cognito.</p>
+    </div>
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">🤖</div><div class="ach-badges"><span class="ach-badge">Aug 2026</span></div></div>
+      <div class="ach-title">AI Tools & ChatGPT Workshop</div>
+      <div class="ach-org">be10x</div>
+      <p class="ach-desc">Using AI for presentations, data analysis, and coding and debugging.</p>
+    </div>
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">📈</div><div class="ach-badges"><span class="ach-badge">Job Simulation</span></div></div>
+      <div class="ach-title">GenAI Data Analytics</div>
+      <div class="ach-org">Tata iQ × Forage</div>
+      <p class="ach-desc">Completed a data analytics job simulation built around GenAI.</p>
+    </div>
+    <div class="glass ach-card reveal tilt">
+      <div class="ach-top"><div class="ach-icon">📊</div><div class="ach-badges"><span class="ach-badge">Job Simulation</span></div></div>
+      <div class="ach-title">Daikibo Operational Analytics</div>
+      <div class="ach-org">Forage · Tableau</div>
+      <p class="ach-desc">Operational analytics and dashboarding with Tableau.</p>
     </div>
   </div>
 </section>
